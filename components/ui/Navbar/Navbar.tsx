@@ -1,6 +1,23 @@
 'use client';
 import React, { useState } from 'react';
-import { Menu, X, Home, Info, Briefcase, Mail } from 'lucide-react';
+import {
+  IoHomeOutline,
+  IoInformationCircleOutline,
+  IoFolderOutline,
+  IoMailOutline,
+  IoHome,
+  IoInformationCircle,
+  IoFolderOpenSharp,
+  IoMailSharp,
+  IoPersonOutline,
+  IoPerson,
+  IoLogoGithub,
+  IoLogoTwitter,
+  IoLogoInstagram,
+  IoMenuSharp,
+  IoCloseSharp,
+} from 'react-icons/io5';
+import Image from 'next/image';
 
 type Props = {};
 
@@ -13,10 +30,31 @@ const Navbar = (props: Props) => {
   };
 
   const menuItems = [
-    { name: 'Home', href: '#', icon: Home },
-    { name: 'About', href: '#', icon: Info },
-    { name: 'Projects', href: '#', icon: Briefcase },
-    { name: 'Contact', href: '#', icon: Mail },
+    { name: 'Home', href: '#', icon: IoHomeOutline, activeIcon: IoHome },
+    {
+      name: 'About',
+      href: '#',
+      icon: IoInformationCircleOutline,
+      activeIcon: IoInformationCircle,
+    },
+    {
+      name: 'Projects',
+      href: '#',
+      icon: IoFolderOutline,
+      activeIcon: IoFolderOpenSharp,
+    },
+    {
+      name: 'Contact',
+      href: '#',
+      icon: IoPersonOutline,
+      activeIcon: IoPerson,
+    },
+  ];
+
+  const socialItems = [
+    { name: 'Github', href: '#', icon: IoLogoGithub },
+    { name: 'Twitter', href: '#', icon: IoLogoTwitter },
+    { name: 'Instagram', href: '#', icon: IoLogoInstagram },
   ];
 
   const handlePageClick = (pageName: string) => {
@@ -26,23 +64,21 @@ const Navbar = (props: Props) => {
 
   return (
     <>
-      {/* Desktop and Tablet Navigation */}
-      <nav className="hidden md:flex items-center justify-between flex-wrap p-6 bg-white shadow-md">
-        <div className="flex items-center flex-shrink-0 text-gray-500 mr-6">
-          <svg
-            className="fill-current h-8 w-8 mr-2"
-            width={54}
-            height={54}
-            viewBox="0 0 54 54"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
-          </svg>
-          <span className="font-semibold text-xl tracking-tight">Koda.io</span>
-        </div>
-
-        {/* Desktop Menu */}
-        <div className="hidden lg:flex">
+      {/* Desktop Navigation */}
+      <nav className="w-full hidden lg:flex items-center justify-between flex-wrap px-[50px] py-[10px] bg-white shadow-md">
+        <div className="flex items-center">
+          <div className="flex items-center flex-shrink-0 text-gray-500 mr-6">
+            <Image
+              src={'/blackIcon.png'}
+              height={25}
+              width={25}
+              alt="Koda.io icon"
+              className="mr-4 grayscale-100"
+            />
+            <span className="font-semibold text-xl tracking-tight">
+              Koda.io
+            </span>
+          </div>
           {menuItems.map((item) => (
             <a
               key={item.name}
@@ -58,14 +94,38 @@ const Navbar = (props: Props) => {
             </a>
           ))}
         </div>
+        <div className="flex items-center">
+          {socialItems.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className="text-gray-500 hover:text-black ml-4"
+            >
+              <item.icon size={20} />
+            </a>
+          ))}
+        </div>
+      </nav>
 
-        {/* Tablet Dropdown */}
-        <div className="lg:hidden relative">
+      {/* Tablet Navigation */}
+      <nav className="w-full hidden md:flex lg:hidden items-center justify-between flex-wrap px-[50px] py-[10px] bg-white shadow-md">
+        <div className="flex items-center flex-shrink-0 text-gray-500 mr-6">
+          <Image
+            src={'/blackIcon.png'}
+            height={25}
+            width={25}
+            alt="Koda.io icon"
+            className="mr-4 grayscale-100"
+          />
+          <span className="font-semibold text-xl tracking-tight">Koda.io</span>
+        </div>
+
+        <div className="relative">
           <button
             onClick={toggleMenu}
-            className="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-500 hover:text-black hover:border-black"
+            className="flex items-center px-3 py-2 rounded text-gray-500 border-gray-500 hover:text-black hover:border-black"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <IoCloseSharp size={24} /> : <IoMenuSharp size={24} />}
           </button>
           {isOpen && (
             <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1">
@@ -83,31 +143,72 @@ const Navbar = (props: Props) => {
                   {item.name}
                 </a>
               ))}
+              <div className="border-t border-gray-200 mt-2 pt-2">
+                {socialItems.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <item.icon size={16} className="mr-2" />
+                    {item.name}
+                  </a>
+                ))}
+              </div>
             </div>
           )}
         </div>
       </nav>
 
+      {/* Mobile Navigation */}
+      <nav className="md:hidden fixed top-0 left-0 right-0 bg-white shadow-md">
+        <div className="flex justify-between items-center px-4 py-2">
+          <div className="flex items-center">
+            <Image
+              src={'/blackIcon.png'}
+              height={25}
+              width={25}
+              alt="Koda.io icon"
+              className="grayscale-100 mr-2"
+            />
+            <span className="font-semibold text-xl tracking-tight text-gray-500">
+              Koda.io
+            </span>
+          </div>
+          <div className="flex">
+            {socialItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-gray-500 hover:text-black ml-4"
+              >
+                <item.icon size={20} />
+              </a>
+            ))}
+          </div>
+        </div>
+      </nav>
+
       {/* Mobile Bottom Tab Navigation */}
       <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-md">
-        <div className="flex justify-around">
+        <div className="flex justify-around pb-2">
           {menuItems.map((item) => (
             <a
               key={item.name}
               href={item.href}
               className={`flex flex-col items-center py-2 px-3 ${
                 activePage === item.name
-                  ? 'bg-gray-500 text-white rounded-md'
+                  ? 'text-black border-y-2 border-gray-500'
                   : 'text-gray-500'
               }`}
               onClick={() => handlePageClick(item.name)}
             >
-              <item.icon
-                className={`h-6 w-6 ${
-                  activePage === item.name ? 'text-white' : 'text-gray-500'
-                }`}
-              />
-              <span className="mt-1 text-xs">{item.name}</span>
+              {activePage === item.name ? (
+                <item.activeIcon size={24} className="text-black" />
+              ) : (
+                <item.icon size={24} className="text-gray-500" />
+              )}
+              <span className="mt-1 text-sm">{item.name}</span>
             </a>
           ))}
         </div>
