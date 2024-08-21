@@ -40,16 +40,16 @@ const Navbar = (props: Props) => {
       activeIcon: IoInformationCircle,
     },
     {
-      name: 'Projects',
-      href: '#',
-      icon: IoFolderOutline,
-      activeIcon: IoFolderOpenSharp,
-    },
-    {
-      name: 'Archives',
+      name: 'Services',
       href: '#',
       icon: IoFileTrayFullOutline,
       activeIcon: IoFileTrayFullSharp,
+    },
+    {
+      name: 'Portfolio',
+      href: '#',
+      icon: IoFolderOutline,
+      activeIcon: IoFolderOpenSharp,
     },
     {
       name: 'Contact',

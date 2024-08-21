@@ -8,7 +8,10 @@ import {
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="mx-[50px] grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+    <section
+      id="home"
+      className="mx-[50px] grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24"
+    >
       <div className="py-6 md:order-1">
         <Image
           src={'/programming.svg'}
