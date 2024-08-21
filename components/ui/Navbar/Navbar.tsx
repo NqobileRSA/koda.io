@@ -73,7 +73,7 @@ const Navbar = (props: Props) => {
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className="w-full hidden lg:flex items-center justify-between flex-wrap px-[50px] py-[10px] bg-white shadow-md">
+      <nav className="z-50 w-full hidden lg:flex items-center justify-between flex-wrap px-[50px] py-[10px] bg-white shadow-md">
         <div className="flex items-center">
           <div className="flex items-center flex-shrink-0 text-gray-500 mr-6">
             <Image
@@ -116,7 +116,7 @@ const Navbar = (props: Props) => {
       </nav>
 
       {/* Tablet Navigation */}
-      <nav className="w-full hidden sm:flex md:flex lg:hidden items-center justify-between flex-wrap px-[50px] py-[10px] bg-white shadow-md">
+      <nav className="z-50 w-full hidden sm:flex md:flex lg:hidden items-center justify-between flex-wrap px-[50px] py-[10px] bg-white shadow-md">
         <div className="flex items-center flex-shrink-0 text-gray-500 mr-6">
           <Image
             src={'/blackIcon.png'}
@@ -180,7 +180,7 @@ const Navbar = (props: Props) => {
       </nav>
 
       {/* Mobile Navigation */}
-      <nav className="md:hidden fixed top-0 left-0 right-0 bg-white shadow-md">
+      <nav className="z-50 md:hidden fixed top-0 left-0 right-0 bg-white shadow-md">
         <div className="flex justify-between items-center px-4 py-2">
           <div className="flex items-center">
             <Image
@@ -235,7 +235,7 @@ const Navbar = (props: Props) => {
       </nav>
 
       {/* Mobile Bottom Tab Navigation */}
-      <nav className="md:hidden border-t-[1px] border-gray-600 fixed bottom-0 left-0 right-0 bg-white shadow-md">
+      <nav className="z-50 md:hidden border-t-[1px] border-gray-600 fixed bottom-0 left-0 right-0 bg-white shadow-md">
         <div className="flex justify-around pb-2">
           {menuItems.map((item) => (
             <a
