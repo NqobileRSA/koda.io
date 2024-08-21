@@ -5,6 +5,8 @@ import {
   IoInformationCircleOutline,
   IoFolderOutline,
   IoMailOutline,
+  IoFileTrayFullOutline,
+  IoFileTrayFullSharp,
   IoHome,
   IoInformationCircle,
   IoFolderOpenSharp,
@@ -42,6 +44,12 @@ const Navbar = (props: Props) => {
       href: '#',
       icon: IoFolderOutline,
       activeIcon: IoFolderOpenSharp,
+    },
+    {
+      name: 'Archives',
+      href: '#',
+      icon: IoFileTrayFullOutline,
+      activeIcon: IoFileTrayFullSharp,
     },
     {
       name: 'Contact',
@@ -108,7 +116,7 @@ const Navbar = (props: Props) => {
       </nav>
 
       {/* Tablet Navigation */}
-      <nav className="w-full hidden md:flex lg:hidden items-center justify-between flex-wrap px-[50px] py-[10px] bg-white shadow-md">
+      <nav className="w-full hidden sm:flex md:flex lg:hidden items-center justify-between flex-wrap px-[50px] py-[10px] bg-white shadow-md">
         <div className="flex items-center flex-shrink-0 text-gray-500 mr-6">
           <Image
             src={'/blackIcon.png'}
@@ -120,7 +128,18 @@ const Navbar = (props: Props) => {
           <span className="font-semibold text-xl tracking-tight">Koda.io</span>
         </div>
 
-        <div className="relative">
+        <div className="relative flex items-center">
+          <div className="flex">
+            {socialItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-gray-500 hover:text-black ml-4"
+              >
+                <item.icon size={20} />
+              </a>
+            ))}
+          </div>
           <button
             onClick={toggleMenu}
             className="flex items-center px-3 py-2 rounded text-gray-500 border-gray-500 hover:text-black hover:border-black"
@@ -175,22 +194,48 @@ const Navbar = (props: Props) => {
               Koda.io
             </span>
           </div>
-          <div className="flex">
-            {socialItems.map((item) => (
+          <div className="flex items-center">
+            <div className="flex">
+              {socialItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-500 hover:text-black ml-4"
+                >
+                  <item.icon size={20} />
+                </a>
+              ))}
+            </div>
+            <button
+              onClick={toggleMenu}
+              className="flex items-center px-3 py-2 rounded text-gray-500 border-gray-500 hover:text-black hover:border-black"
+            >
+              {isOpen ? <IoCloseSharp size={24} /> : <IoMenuSharp size={24} />}
+            </button>
+          </div>
+        </div>
+        {isOpen && (
+          <div className="bg-white shadow-md py-2">
+            {menuItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-500 hover:text-black ml-4"
+                className={`block px-4 py-2 text-sm ${
+                  activePage === item.name
+                    ? 'text-black border-l-4 border-gray-500'
+                    : 'text-gray-700 hover:bg-gray-100'
+                }`}
+                onClick={() => handlePageClick(item.name)}
               >
-                <item.icon size={20} />
+                {item.name}
               </a>
             ))}
           </div>
-        </div>
+        )}
       </nav>
 
       {/* Mobile Bottom Tab Navigation */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-md">
+      <nav className="md:hidden border-t-[1px] border-gray-600 fixed bottom-0 left-0 right-0 bg-white shadow-md">
         <div className="flex justify-around pb-2">
           {menuItems.map((item) => (
             <a
@@ -198,7 +243,7 @@ const Navbar = (props: Props) => {
               href={item.href}
               className={`flex flex-col items-center py-2 px-3 ${
                 activePage === item.name
-                  ? 'text-black border-y-2 border-gray-500'
+                  ? 'text-black border-b-2 border-gray-500'
                   : 'text-gray-500'
               }`}
               onClick={() => handlePageClick(item.name)}
@@ -208,7 +253,7 @@ const Navbar = (props: Props) => {
               ) : (
                 <item.icon size={24} className="text-gray-500" />
               )}
-              <span className="mt-1 text-sm">{item.name}</span>
+              {/* <span className="mt-1 text-sm">{item.name}</span> */}
             </a>
           ))}
         </div>
