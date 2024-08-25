@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  /* background-color: rgb(255, 255, 255);
+  height: 100px; */
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  width: 5px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar:hover {
+  width: 10px;
+}
 *,
 html,
 body {
@@ -14,4 +29,11 @@ body {
 
 body {
   overflow-x: hidden !important;
+}
+
+nav {
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.7px);
+  -webkit-backdrop-filter: blur(3.7px);
 }

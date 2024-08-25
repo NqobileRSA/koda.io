@@ -4,13 +4,16 @@ import React from 'react';
 
 const AboutPage: React.FC = () => {
   return (
-    <section id="about" className=" mt-12 px-10 bg-gray-100 dark:bg-gray-800">
-      <div className="container mx-auto px-4">
+    <section
+      id="about"
+      className=" md:h-[470px] mt-12 px-10  bg-gray-800 md:mt-3"
+    >
+      <div className="container mx-auto px-4 md:mt-3">
         <div className="wow fadeInUp">
           <div className="flex flex-wrap items-center -mx-4">
             <div className="w-full px-4 lg:w-1/2">
-              <div className="mb-12 max-w-lg lg:mb-0">
-                <h3 className="mb-5 text-3xl font-bold leading-tight text-gray-900 dark:text-white">
+              <div className="mb-12 max-w-lg lg:mb-0 md:mt-3">
+                <h3 className="mb-5 text-3xl font-bold leading-tight text-gray-900 dark:text-white md:mt-3">
                   Empowering Small Businesses with Expertise and Innovation
                 </h3>
                 <p className="mb-10 text-lg leading-relaxed text-gray-700 dark:text-gray-400">
@@ -32,13 +35,13 @@ const AboutPage: React.FC = () => {
             <div className="w-full px-4 lg:w-1/2">
               <div className="flex flex-wrap -mx-2 sm:-mx-4 lg:-mx-2 xl:-mx-4">
                 <div className="w-full px-2 sm:w-1/2 sm:px-4 lg:px-2 xl:px-4">
-                  <div className="mb-4 sm:mb-8 h-[400px] relative">
+                  <div className="mb-4 sm:mb-8 h-[400px] relative hidden lg:block">
                     <Image
                       src="/business.svg"
                       alt="Empowering small businesses"
                       width={500}
                       height={500}
-                      className="h-full w-full object-contain object-center"
+                      className="h-full w-full object-contain object-center "
                     />
                   </div>
                 </div>

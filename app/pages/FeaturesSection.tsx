@@ -54,12 +54,12 @@ const features: FeatureItem[] = [
 
 const FeaturesSection: React.FC = () => {
   return (
-    <div className="mt-16 md:mt-0 mx-[50px]">
+    <div className="mt-16 md:mt-0 mx-[50px] pb-[50px]">
       <h2 className="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-        Expert Web Development Solutions
+        Web Solutions
       </h2>
       <p className="text-lg mt-4 text-slate-600">
-        At koda.io, we`re dedicated to helping small businesses succeed online.
+        we`re dedicated to helping small businesses succeed online.
       </p>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
         {features.map((item) => (

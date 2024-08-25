@@ -73,9 +73,9 @@ const Navbar = (props: Props) => {
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className="z-50 w-full hidden lg:flex items-center justify-between flex-wrap px-[50px] py-[10px] bg-white shadow-md">
-        <div className="flex items-center">
-          <div className="flex items-center flex-shrink-0 text-gray-500 mr-6">
+      <nav className="z-50 w-full hidden lg:flex items-center justify-between flex-wrap px-[50px] py-[10px] bg-opacity-[0.5]  shadow-md absolute top-0 ">
+        <div className="flex items-center  ">
+          <div className="flex items-center flex-shrink-0 text-white mr-6">
             <Image
               src={'/blackIcon.png'}
               height={25}
@@ -87,27 +87,41 @@ const Navbar = (props: Props) => {
               Koda.io
             </span>
           </div>
+          {/* {menuItems.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className={`block mt-4 lg:inline-block lg:mt-0 mr-4 px-3 py-2 ${
+                activePage === item.name
+                  ? 'text-white border-b-2 border-gray-500'
+                  : 'text-white hover:text-white'
+              }`}
+              onClick={() => handlePageClick(item.name)}
+            >
+              {item.name}
+            </a>
+          ))} */}
+        </div>
+        <div className="flex items-center">
           {menuItems.map((item) => (
             <a
               key={item.name}
               href={item.href}
               className={`block mt-4 lg:inline-block lg:mt-0 mr-4 px-3 py-2 ${
                 activePage === item.name
-                  ? 'text-black border-b-2 border-gray-500'
-                  : 'text-gray-500 hover:text-black'
+                  ? 'text-white border-b-2 border-gray-500'
+                  : 'text-white hover:text-white'
               }`}
               onClick={() => handlePageClick(item.name)}
             >
               {item.name}
             </a>
           ))}
-        </div>
-        <div className="flex items-center">
           {socialItems.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="text-gray-500 hover:text-black ml-4"
+              className="text-white hover:text-black ml-4"
             >
               <item.icon size={20} />
             </a>
