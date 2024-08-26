@@ -6,6 +6,7 @@ import Testimonials from './Home/Testimonials';
 import Footer from '@/components/ui/Footer/Footer';
 import Roadmap from './Home/Roadmap';
 import WhyWebsite from './Home/WhyWebsite';
+import BreadCrumbs from '@/components/ui/BreadCrumbs/BreadCrumbs';
 
 export default function Home() {
   return (

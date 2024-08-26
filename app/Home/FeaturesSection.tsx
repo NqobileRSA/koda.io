@@ -55,7 +55,8 @@ const features: FeatureItem[] = [
 
 const FeaturesSection: React.FC = () => {
   return (
-    <section className="mt-16 md:mt-0 mx-[50px] pb-[100px]">
+    <section className="pt-16 md:mt-0 px-[50px] pb-[100px] relative">
+      <div className="absolute left-0 inset-0 -z-10 h-full w-screen bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"></div>
       <h2 className="text-4xl lg:text-5xl font-bold lg:tracking-tight">
         Our web solutions
       </h2>

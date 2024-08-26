@@ -4,7 +4,7 @@ type Props = {};
 
 const BreadCrumbs = ({ page }: { page: any }) => {
   return (
-    <div className="flex px-[50px] mb-[50px] mt-[20px]" aria-label="Breadcrumb">
+    <div className="flex px-[50px] mb-[20px] mt-[20px]" aria-label="Breadcrumb">
       <ol className="inline-flex items-center space-x-1 md:space-x-3">
         <li className="inline-flex items-center">
           <a

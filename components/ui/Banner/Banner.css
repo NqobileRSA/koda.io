@@ -1,0 +1,49 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  max-height: 900px;
+}
+.slider-caption {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+  width: 100%;
+  z-index: 15;
+}
+
+.static-bg {
+  background: url('/businessman.jpg') no-repeat scroll center center / cover;
+}
+
+.slider-caption h1,
+#main-slide .item.active .slider-content h1 {
+  font-size: 72px;
+  letter-spacing: 3px;
+  letter-spacing: 3px;
+  letter-spacing: 0.2rem;
+  margin-bottom: 25px;
+}
+.slider-caption h5,
+#main-slide .item.active .slider-content h5 {
+  color: #3f3f3f;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  letter-spacing: 0.2rem;
+}
+.hero-parallax-bg .slider-caption h1,
+.hero-parallax-bg .slider-caption h5,
+.hero-particle-bg .slider-caption h1,
+.hero-particle-bg .slider-caption h5,
+.text-rotator-bg .slider-caption h5 {
+  color: #fff;
+}
+.text-rotator-bg h1 {
+  font-family: 'Roboto', sans-serif;
+}
