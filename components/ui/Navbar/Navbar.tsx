@@ -32,16 +32,16 @@ const Navbar = (props: Props) => {
   };
 
   const menuItems = [
-    { name: 'Home', href: '#', icon: IoHomeOutline, activeIcon: IoHome },
+    { name: 'Home', href: '/', icon: IoHomeOutline, activeIcon: IoHome },
     {
       name: 'About',
-      href: '#',
+      href: '/About',
       icon: IoInformationCircleOutline,
       activeIcon: IoInformationCircle,
     },
     {
       name: 'Services',
-      href: '#',
+      href: '/Services',
       icon: IoFileTrayFullOutline,
       activeIcon: IoFileTrayFullSharp,
     },
@@ -53,7 +53,7 @@ const Navbar = (props: Props) => {
     },
     {
       name: 'Contact',
-      href: '#',
+      href: '/Contact',
       icon: IoPersonOutline,
       activeIcon: IoPerson,
     },
@@ -76,13 +76,13 @@ const Navbar = (props: Props) => {
       <nav className="z-50 w-full hidden lg:flex items-center justify-between flex-wrap px-[50px] py-[10px] bg-opacity-[0.5]  shadow-md absolute top-0 ">
         <div className="flex items-center  ">
           <div className="flex items-center flex-shrink-0 text-white mr-6">
-            <Image
+            {/* <Image
               src={'/blackIcon.png'}
               height={25}
               width={25}
               alt="Koda.io icon"
               className="mr-4 grayscale-100"
-            />
+            /> */}
             <span className="font-semibold text-xl tracking-tight">
               Koda.io
             </span>
@@ -109,7 +109,7 @@ const Navbar = (props: Props) => {
               href={item.href}
               className={`block mt-4 lg:inline-block lg:mt-0 mr-4 px-3 py-2 ${
                 activePage === item.name
-                  ? 'text-white border-b-2 border-gray-500'
+                  ? 'text-white border-b-2 border-white'
                   : 'text-white hover:text-white'
               }`}
               onClick={() => handlePageClick(item.name)}

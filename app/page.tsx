@@ -1,9 +1,11 @@
 import Navbar from '@/components/ui/Navbar/Navbar';
-import HomePage from '@/app/pages/HomePage';
-import FeaturesSection from './pages/FeaturesSection';
-import AboutPage from './pages/AboutPage';
-import Testimonials from './pages/Testimonials';
+import HomePage from '@/app/Home/HomePage';
+import FeaturesSection from './Home/FeaturesSection';
+import AboutPage from './Home/AboutPage';
+import Testimonials from './Home/Testimonials';
 import Footer from '@/components/ui/Footer/Footer';
+import Roadmap from './Home/Roadmap';
+import WhyWebsite from './Home/WhyWebsite';
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <HomePage />
       <FeaturesSection />
       <AboutPage />
+      <WhyWebsite />
+      <Roadmap />
       <Testimonials />
       <Footer />
     </>
