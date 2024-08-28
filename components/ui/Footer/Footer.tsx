@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  TwitterIcon,
-  FacebookIcon,
-  InstagramIcon,
-  LinkedinIcon,
-} from 'lucide-react';
+  IoLogoGithub,
+  IoLogoTwitter,
+  IoLogoInstagram,
+  IoLogoWhatsapp,
+} from 'react-icons/io5';
 
 const Footer: React.FC = () => {
   return (
@@ -68,20 +68,23 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
-            <p className="mb-4">See our socials</p>
+            <h4 className="text-lg font-semibold mb-4">Get In Touch</h4>
+            {/* <p className="mb-4">See our socials</p> */}
             <div className="flex space-x-4">
-              {[TwitterIcon, FacebookIcon, InstagramIcon, LinkedinIcon].map(
-                (Icon, index) => (
-                  <a
-                    key={index}
-                    href="#"
-                    className="text-gray-400 hover:text-blue-500 transition duration-300"
-                  >
-                    <Icon size={24} />
-                  </a>
-                )
-              )}
+              {[
+                IoLogoGithub,
+                IoLogoTwitter,
+                IoLogoInstagram,
+                IoLogoWhatsapp,
+              ].map((Icon, index) => (
+                <Link
+                  key={index}
+                  href="#"
+                  className="text-gray-900 border p-3 rounded-full border-gray-500 round hover:text-blue-500 transition duration-300"
+                >
+                  <Icon size={24} />
+                </Link>
+              ))}
             </div>
           </div>
         </div>

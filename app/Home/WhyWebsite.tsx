@@ -4,25 +4,25 @@ type Props = {};
 
 const WhyWebsite = (props: Props) => {
   return (
-    <section className="overflow-hidden  bg-white relative h-full w-full ">
-      <div className="absolute  z-[0] h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+    <section className="overflow-hidden relative h-full w-full ">
+      <div className="absolute left-0 inset-0 -z-10 h-full w-screen bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]" />
       <div className="container mx-auto">
         <div className="flex flex-wrap items-center justify-between -mx-4">
           <div className="w-full px-4 lg:w-6/12">
-            <div className="flex items-center -mx-3 sm:-mx-4 z-[1]">
+            <div className="flex items-center -mx-3 sm:-mx-4 ">
               <div className="w-full px-3 sm:px-4 xl:w-1/2">
                 <div className="py-3 sm:py-4">
                   <img
                     src="https://i.ibb.co/gFb3ns6/image-1.jpg"
                     alt=""
-                    className="w-full rounded-2xl"
+                    className="w-full object-scale-down rounded-2xl"
                   />
                 </div>
                 <div className="py-3 sm:py-4">
                   <img
                     src="https://i.ibb.co/rfHFq15/image-2.jpg"
                     alt=""
-                    className="w-full rounded-2xl"
+                    className="w-full object-scale-down rounded-2xl"
                   />
                 </div>
               </div>
@@ -31,7 +31,7 @@ const WhyWebsite = (props: Props) => {
                   <img
                     src="/onlineKiosk.jpg"
                     alt=""
-                    className="w-[600px] rounded-md h-[500px] object-cover object-top"
+                    className="w-[600px]  rounded-md h-[500px] object-cover object-top"
                   />
                 </div>
               </div>

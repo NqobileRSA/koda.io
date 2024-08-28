@@ -26,15 +26,17 @@ body {
 
 body {
   overflow-x: hidden !important;
+  /* border: 1px solid rgba(255, 255, 255, 0.151); */
 }
 
 nav {
-  background: rgba(0, 0, 0, 0.38);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: rgba(253, 253, 253, 0.845);
+  color: black;
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3); */
 }
 section {
-  margin-top: 100px;
+  /* margin-top: 100px; */
 }

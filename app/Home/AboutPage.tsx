@@ -4,14 +4,17 @@ import React from 'react';
 
 const AboutPage: React.FC = () => {
   return (
-    <section id="about" className="  mt-12 px-10  bg-gray-900 md:mt-3">
+    <section
+      id="about"
+      className=" h-[450px]  mt-12 px-10  bg-gray-900 md:mt-3"
+    >
       <div className="container mx-auto px-4 md:mt-3">
         <div className="wow fadeInUp">
-          <div className="flex flex-wrap items-center -mx-4">
-            <div className="w-full px-4 lg:w-1/2 py-[-50px]">
-              <div className="mb-12 max-w-lg lg:mb-0 md:mt-3">
+          <div className="flex flex-wrap items-center -mx-4 relative">
+            <div className="w-full px-4 lg:w-1/2 p-[50px]">
+              <div className="mb-12 max-w-lg lg:mb-0 md:mt-3 absolute top-[50px] left-0">
                 <h3 className="mb-5 text-3xl font-bold leading-tight text-gray-900 dark:text-white md:mt-3">
-                  Empowering small businesses and nonprofits.
+                  Mission statement
                 </h3>
                 <p className="mb-10 text-lg leading-relaxed text-gray-700 dark:text-gray-400">
                   Our mission is to help small businesses and nonprofits thrive
@@ -34,10 +37,10 @@ const AboutPage: React.FC = () => {
                 <div className="w-full px-2 sm:w-1/2 sm:px-4 lg:px-2 xl:px-4">
                   <div className="mb-4 sm:mb-8 h-[400px] relative hidden lg:block">
                     <Image
-                      src="/Startup.svg"
+                      src="/laptopbg.png"
                       alt="Empowering small businesses"
-                      width={500}
-                      height={500}
+                      width={700}
+                      height={700}
                       className="h-full w-full object-contain  "
                     />
                   </div>
@@ -54,7 +57,7 @@ const AboutPage: React.FC = () => {
                     />
                   </div>
 
-                  <div className="relative z-10 mb-4 flex items-center justify-center overflow-hidden bg-blue-600 px-6 py-12 sm:mb-8 h-[160px]">
+                  <div className="relative rounded-sm z-10 mb-4 flex items-center justify-center overflow-hidden bg-blue-500 px-6 py-10 sm:mb-8 h-[160px]">
                     <div className="text-center">
                       <span className="block text-5xl font-extrabold text-white">
                         03

@@ -19,7 +19,7 @@ const HeroSection: React.FC = () => {
           layout="fill"
           className="absolute inset-0 w-full h-full object-cover object-center z-1"
         />
-        <div className="absolute inset-0 bg-black opacity-30 z-2" />
+        <div className="absolute inset-0 bg-black opacity-50 z-2" />
         <div className="container relative z-3 text-center">
           <h2
             className="text-4xl lg:text-6xl font-bold uppercase mb-4 text-white"
@@ -44,7 +44,7 @@ const HeroSection: React.FC = () => {
               href="#"
               target="_blank"
               rel="noopener"
-              className="flex gap-1 items-center justify-center bg-black text-white px-6 py-3 rounded-md hover:bg-gray-800"
+              className="flex gap-1 items-center justify-center bg-black text-white font-500 px-6 py-3 rounded-md hover:invert"
             >
               <IoChatboxEllipsesOutline
                 className="w-6 h-6"
@@ -56,7 +56,7 @@ const HeroSection: React.FC = () => {
               href="#"
               target="_blank"
               rel="noopener"
-              className="flex gap-1 items-center justify-center border border-white bg-white text-black px-6 py-3 rounded-md hover:bg-none hover:text-black"
+              className="flex gap-1 items-center justify-center border border-white bg-white text-black px-6 py-3 rounded-md hover:bg-none hover:invert"
             >
               <IoLaptopOutline className="w-6 h-6" name="bx:bxl-github" />
               Explore Our Work

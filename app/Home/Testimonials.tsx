@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { FaQuoteLeft } from 'react-icons/fa';
 
 interface Testimonial {
   id: number;
@@ -56,9 +57,10 @@ const testimonials: Testimonial[] = [
 
 const TestimonialsSection: React.FC = () => {
   return (
-    <section id="testimonials" className=" py-5">
+    <section id="testimonials" className=" pt-[45px] relatuec">
+      <div className="absolute  z-[0] h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
       <div className=" mx-auto px-4">
-        <div className="text-left px-[50px] mb-[30px]">
+        <div className="text-center px-[50px] mb-[30px]">
           <h2 className="text-4xl lg:text-5xl font-bold lg:tracking-tight">
             What our client`s say about us
           </h2>
@@ -89,7 +91,7 @@ const TestimonialsSection: React.FC = () => {
         >
           {testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.id}>
-              <div className="bg-white rounded-lg shadow-md p-8 ml-5 relative max-w-[480px]">
+              <div className="bg-white border-y border-gray-00 rounded-lg shadow-md p-8 ml-5 relative max-w-[480px]">
                 <div className="flex justify-between">
                   <div className="">
                     <h3 className="text-xl font-bold mb-1">
@@ -122,14 +124,14 @@ const TestimonialsSection: React.FC = () => {
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray-600 italic">
-                  <span className="text-4xl text-[#3498db] opacity-40">
-                    &ldquo;
+                <p className="text-gray-600 text-left italic relative">
+                  <span className="text-6xl text-gray-300 inset-7 opacity-40 absolute top-[-10px] left-[-30px]">
+                    <FaQuoteLeft />
                   </span>
                   {testimonial.quote}
-                  <span className="text-4xl text-[#3498db] opacity-40">
+                  {/* <span className="text-4xl text-[#3498db] opacity-40">
                     &rdquo;
-                  </span>
+                  </span> */}
                 </p>
               </div>
             </SwiperSlide>

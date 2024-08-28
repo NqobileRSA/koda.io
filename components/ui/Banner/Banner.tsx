@@ -1,5 +1,5 @@
 import './Banner.css';
-type Props = {};
+type Props = { title: string };
 
 const Banner = (props: Props) => {
   return (
@@ -12,9 +12,9 @@ const Banner = (props: Props) => {
       <div className="absolute top-1/2 left-0 w-full text-center uppercase transform -translate-y-1/2 z-15">
         <div className="container mx-auto p-4">
           <div className="row flex justify-center">
-            {/* Hero Title */}
-            <h1 className="text-6xl tracking-wide mb-6 text-white">
-              Learn about us
+            {/* {props.title} */}
+            <h1 className="text-6xl tracking-wide mb-6 text-white uppercase">
+              {props.title}
             </h1>
             {/* Hero Subtitle */}
             {/* <h5 className="text-lg text-[#3f3f3f] tracking-wide">
