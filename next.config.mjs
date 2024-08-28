@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['furkankoseoglu.com', 'placehold.co', 'i.ibb.co'],
+    domains: ['furkankoseoglu.com', 'via.placeholder.com', 'i.ibb.co'],
   },
 };
 
