@@ -17,7 +17,7 @@ type PortfolioItem = {
 const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
-    category: 'app',
+    category: 'App',
     imageUrl: 'https://via.placeholder.com/400x300',
     title: 'App 1',
     description: 'This is a description for App 1',
@@ -25,7 +25,26 @@ const portfolioItems: PortfolioItem[] = [
     projectDate: '2024-01-01',
     projectUrl: 'https://example.com/app1',
   },
-  // ... (repeat for all other items, adding the new fields)
+  {
+    id: 2,
+    category: 'Website',
+    imageUrl: 'https://via.placeholder.com/400x300',
+    title: 'App 1',
+    description: 'This is a description for App 1',
+    client: 'Client A',
+    projectDate: '2024-01-01',
+    projectUrl: 'https://example.com/app1',
+  },
+  {
+    id: 3,
+    category: 'Website',
+    imageUrl: 'https://via.placeholder.com/400x300',
+    title: 'App 1',
+    description: 'This is a description for App 1',
+    client: 'Client A',
+    projectDate: '2024-01-01',
+    projectUrl: 'https://example.com/app1',
+  },
 ];
 
 const Portfolio: React.FC = () => {
@@ -76,7 +95,7 @@ const Portfolio: React.FC = () => {
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          {['*', 'app', 'product', 'branding', 'books'].map((category) => (
+          {['*', 'App', 'Website', 'branding'].map((category) => (
             <li
               key={category}
               onClick={() => setFilter(category)}

@@ -27,24 +27,6 @@ const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
 }) => {
   return (
     <main className="bg-white text-gray-800">
-      {/* Page Title */}
-      <div className="bg-gray-100 py-6">
-        <div className="container mx-auto px-4 lg:flex lg:justify-between lg:items-center">
-          <h1 className="text-2xl font-light mb-2 lg:mb-0">{title}</h1>
-          <nav>
-            <ol className="flex flex-wrap text-sm">
-              <li className="mr-2">
-                <a href="/" className="hover:text-blue-500">
-                  Home
-                </a>
-              </li>
-              <li className="mr-2">/</li>
-              <li className="text-gray-500">Portfolio Details</li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-
       {/* Portfolio Details Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
